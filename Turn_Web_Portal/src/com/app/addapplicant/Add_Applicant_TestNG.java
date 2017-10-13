@@ -21,6 +21,8 @@ public class Add_Applicant_TestNG {
 	
 	
 	@BeforeTest
+	/*This method is used to launch the Chrome's browser instance and it is used to log in to Turn
+	 Web Portal page as well. This one annotation is executed just once before all the @Test included below.*/
 	public void launchBrowserAndLogin() throws Exception {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\Chrome_Driver\\chromedriver.exe");
 	    driver = new ChromeDriver();
@@ -41,22 +43,28 @@ public class Add_Applicant_TestNG {
 	}
 	
 	@BeforeMethod
+	/*This method is used to click on the "Add Candidate" button all and it is executed before to run 
+	 all the @Test included below.*/
 	public void turnAppLogIn() throws Exception { 
 	driver.findElement(By.xpath("//button[@id='check_worker']")).click();
 	
 	}
 
-	@AfterMethod 
+	@AfterMethod
+	/*This method is used to click on the "Cancel" button under the "Add Candidate" window 
+	 and it is executed after to run all the @Test included below.*/
 	public void closeAddApplicantWindow() throws Exception {
 		driver.findElement(By.xpath("//button[@id='close_modal']")).click();
 		Thread.sleep(1000);
 	}	
 	
 	@AfterTest
+	/*This method is used to close the Chrome's browser instance once all the @Test included below were run.*/
 	public void tearDown(){
 		driver.quit();
 	}
-	
+
+/*++++++++++++++++++++++++++++TEST SCENARIOS++++++++++++++++++++++++++++*/
 	/*This scenario validate the following:
 	 Test 1 - GIVEN the user enters a voIP phone number under the ADD CANDIDATE window
 	   		  WHEN  the user hits the NEXT button 
@@ -123,6 +131,7 @@ public class Add_Applicant_TestNG {
 	Assert.assertEquals(actualResult, expectedResult);
 
 }
+	
 	/*This scenario validate the following:
 	 Test 1 - GIVEN the user enters an email account with errors under the ADD CANDIDATE window
 	   		  WHEN  the user hits the NEXT button 
@@ -241,13 +250,12 @@ public class Add_Applicant_TestNG {
 	
 	}		
 	
-			
+	/*This JAVASCRIPT function is used to highlight the background from the fields User & Password
+	 within the Log In page*/			
 public static void fnHighlightMe(WebDriver driver, WebElement txtUserName, WebElement txtPassword) throws Exception{
-		  //Creating JavaScriptExecuter Interface
 		   JavascriptExecutor js = (JavascriptExecutor)driver;
 		   for (int iCnt = 0; iCnt < 3; iCnt++) {
 			   try {
-		      //Execute javascript
 		         js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", txtUserName, txtPassword);
 		         js.executeScript("arguments[0].style.border=''", txtUserName, txtPassword);
 			   } catch (Exception e) {
