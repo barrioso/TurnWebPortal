@@ -11,3 +11,4 @@ There were developed a documentation to cover the pre and post to SIT phases. Al
        * SIT_Execution_Repor_TurnPartnerDashboard_Sample
 
 You will find a PDF included named "Selenium_Setup_Walkthrough" which it could be used to set up the Eclipse environment in order to run the java scrip provided under the below path:
+       * Turn_Web_Portal/src/com/app/addapplicant/Add_Applicant_TestNG.java
