@@ -1,0 +1,1 @@
+Turn is an app-based labor marketplace whose goal is to help workers find varied and meaningful work in the on-demand economy. As background checks are necessary for the protection of on-demand companies and customers, Turn has built a background check platform that works via a RESTful API and via a web dashboard that can be used by Turn's partners.
