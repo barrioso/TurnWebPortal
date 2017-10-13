@@ -12,3 +12,8 @@ There were developed a documentation to cover the pre and post to SIT phases. Al
 
 You will find a PDF included named "Selenium_Setup_Walkthrough" which it could be used to set up the Eclipse environment in order to run the java scrip provided under the below path:
        * Turn_Web_Portal/src/com/app/addapplicant/Add_Applicant_TestNG.java
+
+You will find as well a demo video about the script run with Selenium Web Driver, the file name is called:
+       * Add_Candidate_Flow_Demo
+       
+
