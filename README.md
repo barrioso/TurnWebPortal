@@ -10,4 +10,4 @@ There were developed a documentation to cover the pre and post to SIT phases. Al
        * DLTC_TurnPartnerDashboard_Sample
        * SIT_Execution_Repor_TurnPartnerDashboard_Sample
 
-How to Run the "Add_Applicant_TestNG" script:
+You will find a PDF included named "Selenium_Setup_Walkthrough" which it could be used to set up the Eclipse environment in order to run the java scrip provided under the below path:
